@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./css/login.css">
+
+</head>
+<body>
+
+    <div id="container">
+        <img class="img" src="./img/log.png" height="85px"/><br>
+        
+        <h1>LOG IN</h1><br>
+        
+        <input class="txt" id="emailfield" type="email" placeholder="Email*"/><br>
+        
+        <input class="txt" id="passfield" type="password" placeholder="Password*"/><br>
+        
+        <input onclick="login()" class="submit" type="submit" value="Login"/><br>
+
+        <a id="link1" class="link"href="./signup.html">New User? Click here.</a>
+
+        <a id="link2" onclick="reset()" class="link" href="#">Forgot/Change<br>Password?</a>
+        
+    </div>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+    
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDfKvJsQLm_8136tTSZQtQpF2oxwnot6Kk",
+        authDomain: "pdplogin-a2c4a.firebaseapp.com",
+        databaseURL: "https://pdplogin-a2c4a.firebaseio.com",
+        projectId: "pdplogin-a2c4a",
+        storageBucket: "",
+        messagingSenderId: "944372692056",
+        appId: "1:944372692056:web:7825541bc79af6fe"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
